@@ -15,8 +15,10 @@
   "bugs": {
     "url": "https://github.com/bocodigitalmedia/boco-command/issues"
   },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
   "dependencies": {
-    "coffee-script": "~1.6.3",
     "boco-validation": "bocodigitalmedia/boco-validation"
   }
 }
