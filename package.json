@@ -1,6 +1,6 @@
 {
   "name": "boco-command",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Command module for bocodigital",
   "main": "./lib/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "coffee-script": "~1.6.3"
   },
   "dependencies": {
-    "boco-validation": "bocodigitalmedia/boco-validation"
+    "boco-validation": "bocodigitalmedia/boco-validation",
+    "uuid": "~1.4.1"
   }
 }

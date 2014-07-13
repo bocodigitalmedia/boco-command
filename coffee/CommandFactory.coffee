@@ -7,6 +7,9 @@ class CommandFactory
   setDefaults: ->
     @constructors = {} unless @constructors?
 
+  generateId: ->
+    require('uuid').v4()
+    
   construct: (name, props) ->
 
     unless @constructors.hasOwnProperty name
