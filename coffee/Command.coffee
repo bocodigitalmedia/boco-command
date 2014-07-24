@@ -12,7 +12,7 @@ class Command
     @name = @constructor.name unless @name?
 
   setParameters: (params) ->
-    @parameters = constructParameters params
+    @parameters = @constructParameters params
 
   constructParameters: (params = {}) ->
     return params
