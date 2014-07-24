@@ -11,8 +11,11 @@ class Command
   setDefaults: ->
     @name = @constructor.name unless @name?
 
-  setParameters: (parameters) ->
-    @parameters = parameters
+  setParameters: (params) ->
+    @parameters = constructParameters params
+
+  constructParameters: (params = {}) ->
+    return params
 
   validateParameters: ->
     new Validation subject: @parameters

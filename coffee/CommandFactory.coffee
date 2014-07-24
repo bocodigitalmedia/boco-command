@@ -9,7 +9,7 @@ class CommandFactory
 
   generateId: ->
     require('uuid').v4()
-    
+
   construct: (name, props) ->
 
     unless @constructors.hasOwnProperty name
@@ -20,9 +20,10 @@ class CommandFactory
     constructor = @constructors[name]
     command = new constructor props
     command.id = @generateId() unless command.id?
+
     return command
 
-  register: (constructors) ->
+  register: (constructors = {}) ->
     @constructors[name] = constructor for own name, constructor of constructors
 
 module.exports = CommandFactory

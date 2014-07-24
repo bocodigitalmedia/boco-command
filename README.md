@@ -14,13 +14,13 @@ A common usage scenario would be to create command classes for each of the comma
 
     class SayHello extends BocoCommand.Command
 
-      setParameters: (params = {}) ->
-        @parameters = {}
-        @parameters.to = params.to
+      constructParameters: (params = {}) ->
+        to: params.to
 
       validateParameters: ->
         validation = super()
-        validation.addError 'to', 'must be present' unless @parameters.to?
+        unless @parameters.to?
+          validation.addError 'to', 'must be present'
         return validation
 
 
