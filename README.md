@@ -111,3 +111,5 @@ If you attempt to construct a command whose name has not been registered, the `c
       assert error instanceof BocoCommand.Errors.UnregisteredCommand
       assert.equal "Foo", error.payload.name
       true
+
+[boco-validation]: https://github.com/bocodigitalmedia/boco-validation
