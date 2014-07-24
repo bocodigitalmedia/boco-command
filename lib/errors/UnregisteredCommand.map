@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "UnregisteredCommand.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "coffee/errors/UnregisteredCommand.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,gCAAA;KAAA;oSAAA;;CAAA,CAAA,CAAc,IAAA,IAAd,CAAc;;CAAd,CAEM;CACJ;;;;;CAAA;;CAAA,EAAkB,GAAA,GAAC,OAAnB;;GAA4B,KAAT;QACjB;aAAA;CAAA,CAAM,EAAN,EAAY,EAAZ;CADgB;CAAlB,IAAkB;;CAAlB;;CADgC;;CAFlC,CAMA,CAAiB,GAAX,CAAN,YANA;CAAA"
+}

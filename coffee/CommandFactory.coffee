@@ -1,3 +1,5 @@
+UnregisteredCommand = require './errors/UnregisteredCommand'
+
 class CommandFactory
 
   constructor: (props = {}) ->
@@ -11,10 +13,9 @@ class CommandFactory
     require('uuid').v4()
 
   construct: (name, props) ->
-
-    unless @constructors.hasOwnProperty name
-      error = new Error "Command not registered: #{name}"
-      error.name = "CommandNotRegistered"
+    unless @isRegistered name
+      error = new UnregisteredCommand
+      error.setPayload name: name
       throw error
 
     constructor = @constructors[name]
@@ -25,5 +26,8 @@ class CommandFactory
 
   register: (constructors = {}) ->
     @constructors[name] = constructor for own name, constructor of constructors
+
+  isRegistered: (name) ->
+    @constructors.hasOwnProperty name
 
 module.exports = CommandFactory

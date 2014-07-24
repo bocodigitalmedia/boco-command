@@ -11,14 +11,13 @@ class Command
   setDefaults: ->
     @name = @constructor.name unless @name?
 
-  setParameters: (params) ->
-    @parameters = @constructParameters params
-
   constructParameters: (params = {}) ->
     return params
 
+  setParameters: (params) ->
+    @parameters = @constructParameters params
+
   validateParameters: ->
     new Validation subject: @parameters
-
 
 module.exports = Command
