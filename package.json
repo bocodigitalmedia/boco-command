@@ -1,11 +1,11 @@
 {
   "name": "boco-command",
-  "version": "0.0.4",
-  "description": "Command module",
+  "version": "0.0.5",
+  "description": "Classes and utilities for working with commands",
   "main": "./lib/index.js",
   "scripts": {
     "test": "./node_modules/coffee-script/bin/coffee -l README.md",
-    "compile": "./node_modules/coffee-script/bin/coffee -c -m -o lib coffee"
+    "compile": "rm -r lib && mkdir lib && ./node_modules/coffee-script/bin/coffee -c -m -o lib coffee"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
     "coffee-script": "~1.6.3"
   },
   "dependencies": {
-    "uuid": "~1.4.1",
     "boco-validation": "bocodigitalmedia/boco-validation",
     "boco-error": "bocodigitalmedia/boco-error"
   }
