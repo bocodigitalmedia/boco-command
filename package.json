@@ -1,6 +1,6 @@
 {
   "name": "boco-command",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Classes and utilities for working with commands",
   "main": "./lib/index.js",
   "scripts": {

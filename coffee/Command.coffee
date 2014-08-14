@@ -9,13 +9,13 @@ class Command
     @setDefaults()
 
   setDefaults: ->
-    @name = @constructor.name unless @name?
-
-  constructParameters: (params = {}) ->
-    return params
+    @name ?= @constructor.name
 
   setParameters: (params) ->
     @parameters = @constructParameters params
+
+  constructParameters: (params = {}) ->
+    return params
 
   validateParameters: ->
     new Validation subject: @parameters
